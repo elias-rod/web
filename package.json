@@ -1,0 +1,27 @@
+{
+  "name": "public_html",
+  "version": "1.0.0",
+  "description": "futuro proyecto",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DeCecco/web.git"
+  },
+  "keywords": [
+    "pablo"
+  ],
+  "author": "Pablo De Cecco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DeCecco/web/issues"
+  },
+  "homepage": "https://github.com/DeCecco/web#readme"
+}
