@@ -1,0 +1,24 @@
+CREATE TABLE `usuario` 
+( `id` INT NOT NULL AUTO_INCREMENT , 
+  `correo` VARCHAR(50) NOT NULL , 
+  `clave` VARCHAR(30) NOT NULL , 
+  `nombre` VARCHAR(50) NOT NULL , 
+  `perfil` VARCHAR(30) NOT NULL , 
+  `activo` tinyint(1) NOT NULL ,  PRIMARY KEY (`id`)) 
+  ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+
+CREATE TABLE `producto` 
+( `id` INT NOT NULL AUTO_INCREMENT, 
+  `nombre` VARCHAR(50) NOT NULL , 
+  `descripcion` VARCHAR(250) NOT NULL , 
+  `precio` FLOAT NOT NULL , 
+  `foto` VARCHAR(250) NOT NULL , 
+  `vigente` tinyint(1) NOT NULL , PRIMARY KEY (`id`)) 
+ENGINE = InnoDB CHARACTER SET latin1 COLLATE latin1_spanish_ci;
+
+
+INSERT INTO `usuario` (`id`, `correo`, `clave`, `nombre`, `perfil`, `activo`) VALUES
+(1, 'admin@utn.com', '123456', 'Administrador', 'admin', 1),
+(2, 'comprador@utn.com', '123456', 'comprador', 'comprador', 1),
+(6, 'vendedor@utn.com', '123456', 'vendedor', 'vendedor', 1),
+(7, 'vendedor2@utn.com', '123456', 'Roberto', 'vendedor', 1);

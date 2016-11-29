@@ -2,17 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootswatch: Darkly</title>
+    <title>UTN rspLab2016</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="stylesheet" href="./bootstrap.css" media="screen">
+    <link rel="stylesheet" href="bower_components/bootstrap/bootstrap.css" media="screen">
     <link rel="stylesheet" href="assets/css/custom.min.css">
 
+    <link href="bower_components/angular-ui-grid/ui-grid.css" rel="stylesheet">
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bower_components/angular-datatables/dist/css/angular-datatables.css" rel="stylesheet">
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
       <script src="../bower_components/respond/dest/respond.min.js"></script>
     <![endif]-->
+    <style type="text/css">
+      .columnaUI{
+        text-align: center !important;
+       /* font-size:12px;*/
+      }
+      .leftt {
+        float:left !important; 
+        vertical-align:middle !important;
+        margin-bottom: 10px;
+      }
+      .right {
+        float:right !important; 
+        vertical-align:middle !important;
+        margin-bottom: 10px;
+      }
+    </style>
     <script>
 
      var _gaq = _gaq || [];
@@ -29,78 +48,28 @@
 
     </script>
 
+  <script SRC="bower_components/angular/angular.min.js" TYPE="text/javascript"></script>  
+  <script src="bower_components/angular-ui-grid/ui-grid.min.js"></script>
+  <script SRC="bower_components/angular-ui-router/release/angular-ui-router.min.js" TYPE="text/javascript"></script>
+  <script SRC="bower_components/angular-file-upload/dist/angular-file-upload.min.js" TYPE="text/javascript"></script>
+  <script SRC="bower_components/satellizer/dist/satellizer.min.js" TYPE="text/javascript"></script>
+  <script SRC="bower_components/angular-jwt/dist/angular-jwt.min.js" TYPE="text/javascript">console.log('inicio');</script>
+  <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
+  <script src="bower_components/pdfmake/build/pdfmake.min.js"></script>
+  <script src="bower_components/pdfmake/build/vfs_fonts.js"></script>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script src="js/app.js" TYPE="text/javascript"></script>
+  <script src="js/controladores/inicio.js" TYPE="text/javascript"></script>
+  <script src="js/factory/factoryProducto.js" TYPE="text/javascript"></script>
+  <script src="js/factory/factoryRutas.js" TYPE="text/javascript"></script>
+  <script src="js/factory/factoryUsuario.js" TYPE="text/javascript"></script>
+  <script src="js/servicios/servicio.js" TYPE="text/javascript"></script> 
 	
 </head>
-<body>
- <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="../" class="navbar-brand">Bootswatch</a>
-          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes">Themes <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="themes">
-                <li><a href="../default/">Default</a></li>
-                <li class="divider"></li>
-                <li><a href="../cerulean/">Cerulean</a></li>
-                <li><a href="../cosmo/">Cosmo</a></li>
-                <li><a href="../cyborg/">Cyborg</a></li>
-                <li><a href="../darkly/">Darkly</a></li>
-                <li><a href="../flatly/">Flatly</a></li>
-                <li><a href="../journal/">Journal</a></li>
-                <li><a href="../lumen/">Lumen</a></li>
-                <li><a href="../paper/">Paper</a></li>
-                <li><a href="../readable/">Readable</a></li>
-                <li><a href="../sandstone/">Sandstone</a></li>
-                <li><a href="../simplex/">Simplex</a></li>
-                <li><a href="../slate/">Slate</a></li>
-                <li><a href="../spacelab/">Spacelab</a></li>
-                <li><a href="../superhero/">Superhero</a></li>
-                <li><a href="../united/">United</a></li>
-                <li><a href="../yeti/">Yeti</a></li>
-              </ul>
-            </li>
-            <li>
-              <a href="../help/">Help</a>
-            </li>
-            <li>
-              <a href="http://news.bootswatch.com">Blog</a>
-            </li>
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="download">Darkly <span class="caret"></span></a>
-              <ul class="dropdown-menu" aria-labelledby="download">
-                <li><a href="http://jsfiddle.net/bootswatch/1172d9hh/">Open Sandbox</a></li>
-                <li class="divider"></li>
-                <li><a href="./bootstrap.min.css">bootstrap.min.css</a></li>
-                <li><a href="./bootstrap.css">bootstrap.css</a></li>
-                <li class="divider"></li>
-                <li><a href="./variables.less">variables.less</a></li>
-                <li><a href="./bootswatch.less">bootswatch.less</a></li>
-                <li class="divider"></li>
-                <li><a href="./_variables.scss">_variables.scss</a></li>
-                <li><a href="./_bootswatch.scss">_bootswatch.scss</a></li>
-              </ul>
-            </li>
-          </ul>
-
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
-            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
-          </ul>
-
-        </div>
-      </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script src="js/app.js"></script>
+<body ng-app="rspLab2016" >
+  <div ui-view > 
+  </div>
 </body>
 </html>

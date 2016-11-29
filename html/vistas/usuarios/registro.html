@@ -1,0 +1,59 @@
+<div class="col-lg-6">
+  <div class="well bs-component">
+    <form class="form-horizontal"  name="loginForm">
+      <fieldset>
+        <legend>Ingreso</legend>
+          <div class="text-danger" ng-show="resultado.ver">
+            <span style="font-size:26px;">{{resultado.mensaje}}</span>
+        </div>
+        <div class="form-group">
+          <label for="inputNombre" class="col-lg-2 control-label">Nombre</label>
+          <div class="col-lg-10">
+            <input class="form-control" id="inputNombre" name="loginformNombre" ng-model="usuario.nombre" placeholder="Nombre" type="text">
+          </div>
+        </div>
+          <div class="form-group">
+          <label for="inputCorreo" class="col-lg-2 control-label">Correo</label>
+          <div class="col-lg-10">
+            <input class="form-control" id="inputCorreo" name="loginformCorreo" ng-model="usuario.correo" placeholder="Correo" type="text">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputClave" class="col-lg-2 control-label">Clave</label>
+          <div class="col-lg-10">
+            <input class="form-control" id="inputClave" name="loginformClave" ng-model="usuario.clave" placeholder="Clave" type="password">
+             
+      	  </div>  
+        </div>
+          <div class="form-group">
+          <label for="inputclaveRepetida" class="col-lg-2 control-label">Repetir clave</label>
+          <div class="col-lg-10">
+            <input class="form-control" id="inputclaveRepetida" name="loginformclaveRepetida" ng-model="usuario.claveRepetida" placeholder="claveRepetida" type="password">
+             
+      	  </div>  
+        </div>
+            <div class="form-group"> 
+            <label for="select" class="col-lg-2 control-label">Perfil</label>
+            <div class="col-lg-10">
+        <select ng-model="usuario.perfil" class="form-control" ng-if="admin">
+		    	<option value="admin">Administrador</option>
+		    	<option value="vendedor">Vendedor</option>
+		    	<option value="comprador">Comprador</option>
+		    </select>
+		    </div>
+		    </div>
+        <div class="form-group"> 
+          <div class="col-lg-10 col-lg-offset-2"> 
+            <button type="submit" class="btn btn-primary" ng-disabled="loginForm.$invalid" ng-disabled="formAlta.$invalid && (usuario.clave == usuario.copiaClave)" ng-click="Guardar()">Guardar</button>
+ 
+          </div>
+            
+        </div>
+         <br/>
+          <p class="text-center text-muted">
+        <small>No tienes una cuenta? <a ui-sref="utn.registro()">Registrate</a></small>
+      </p>
+      </fieldset>
+    </form>
+  </div>
+</div> 

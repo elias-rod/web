@@ -1,0 +1,46 @@
+<div class="container" style="margin-top:5%">
+    <div class="{{resultado.estilo}}" ng-show="resultado.ver">
+        <span style="font-size:26px;">{{resultado.mensaje}}</span>
+    </div>
+	<utn-titulo titulo="Listado de Productos"></utn-titulo>
+		<div>
+			<button id='toggleFiltering' ng-click="toggleFiltering()" class="btn btn-success leftt">Filtros</button>
+			<span ng-if="mensaje.estado!='' " class="alertt alert-warning col-sm-offset-1 col-sm-8 center">{{mensaje.estado}}</span>
+			<a ui-sref="utn.altaProducto()" class="btn btn-primary right">Alta</a>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-12" style="color: black; ">
+				<div ui-grid="Listado" ui-grid-exporter ui-grid-selection ui-grid-resize-columns ui-grid-move-columns ui-grid-pagination
+					class="myGrid"></div>
+					<div><span class="col-sm-2" >Pagina: {{ gridApi.pagination.getPage() }} de {{ gridApi.pagination.getTotalPages() }}</span>
+					<span class="col-sm-offset-7 col-sm-3">
+						<ul   class="pagination">
+						    <li>
+						      <a href="" ng-click="gridApi.pagination.seek(gridApi.pagination.getTotalPages()-gridApi.pagination.getTotalPages()+1);" aria-label="Previous">
+						        <span aria-hidden="true">Inicio</span>
+						      </a>
+						    </li>
+						    <li>
+						      <a href="" ng-click="gridApi.pagination.previousPage()" aria-label="Next">
+						        <span aria-hidden="true">&laquo;</span>
+						      </a>
+						    </li>
+						    <li>
+						      <a href="" ng-click="gridApi.pagination.nextPage()" aria-label="Next">
+						        <span aria-hidden="true">&raquo;</span>
+						      </a>
+						    </li>
+						    <li>
+						      <a href="" ng-click="gridApi.pagination.seek(gridApi.pagination.getTotalPages());" aria-label="Next">
+						        <span aria-hidden="true">Último</span>
+						      </a>
+						    </li>
+						</ul>	
+						</span>
+					</div>			   				
+			</div>
+		</div>	
+
+</div>
